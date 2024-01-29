@@ -67,7 +67,7 @@ network=[
     [[random.random() for _ in range(HIDDEN+1)] for _ in range(4)]
 ]
 
-learning_rate= 0.01 
+learning_rate= 1.0 
 with tqdm.trange(500) as t:
     for epoch in t:
         epoch_loss=0.0
@@ -85,7 +85,7 @@ with tqdm.trange(500) as t:
             ]
         t.set_description(f"Fizz Buzz(loss:{epoch_loss:.2f})")
 
-def argmax(xs:list)  -> int:
+def argmax(xs:List)  -> int:
     return max(range (len(xs)), key=lambda i:xs[i])
 
 num_correct=0
@@ -95,7 +95,7 @@ for n in range(1,101):
     predicted=argmax(feed_forward(network,x)[-1])
     actual=argmax(fizzbuzzencode(n))
     labels=[str(n),"fizz", "buzz","fizzbuzz"]
-    print(n,labels(predicted),labels[actual])
+    print(n,labels[predicted],labels[actual])
     if predicted == actual:
         num_correct+=1
 
