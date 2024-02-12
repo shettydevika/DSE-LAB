@@ -1,3 +1,4 @@
+#Python program to display multiple types of charts using Matplotlib package
 
 import matplotlib.pyplot as plt
 import numpy as np
