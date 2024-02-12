@@ -1,4 +1,4 @@
-#Python program to perform File Operation on Excel Data Set.
+#Python program to perform Data Manipulation operations using Pandas package.
 import pandas as pd
 data = {
     'Name': ['John', 'Emma', 'Sam', 'Lisa', 'Tom'],
