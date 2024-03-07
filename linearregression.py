@@ -66,3 +66,5 @@ plt.show()
 #Prediction of Test & Training Set result
 y_pred_slr=slr.predict(x_test)
 x_pred_slr=slr.predict(x_train)
+
+print("Prediction for test set: {}".format(y_pred_slr))
